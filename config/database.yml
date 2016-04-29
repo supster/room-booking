@@ -1,0 +1,17 @@
+default: &default
+  adapter: mysql2
+  host: localhost
+  username: root
+  encoding: utf8
+
+development:
+  <<: *default
+  database: room_booking_dev
+
+test:
+  <<: *default
+  database: room_booking_test
+
+production:
+  <<: *default
+  database: room_booking
